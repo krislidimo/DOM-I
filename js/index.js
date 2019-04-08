@@ -9,7 +9,7 @@ const siteContent = {
         "img-src": "img/logo.png"
     },
     "cta": {
-        "h1": "DOM Is Awesome",
+        "h1": "DOM\n Is\n Awesome",
         "button": "Get Started",
         "img-src": "img/header-img.png"
     },
@@ -95,3 +95,16 @@ el1.textContent = 'Child';
 el2.textContent = 'Child';
 nav.appendChild(el1);
 nav.prepend(el2);
+
+//styling
+let cta = document.querySelector(".cta");
+cta.setAttribute("style", "display:flex; justify-content:flex-end");
+// cta.style.display = "flex";
+// cta.style.justifyContent = "flex-end";
+console.log(cta)
+
+let contact = document.querySelector(".contact");
+contact.setAttribute("style", "display:flex; flex-direction: column; align-items: center;");
+
+
+ctah1.style.color = "blue";
