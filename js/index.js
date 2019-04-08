@@ -41,8 +41,8 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-let nav = document.querySelectorAll("header nav a");
-nav.forEach((item, i) => item.textContent = siteContent["nav"][`nav-item-${i}`]);
+let ancors = document.querySelectorAll("header nav a");
+ancors.forEach((item, i) => item.textContent = siteContent["nav"][`nav-item-${i}`]);
 
 let ctah1 = document.querySelector(".cta-text h1");
 ctah1.textContent = siteContent["cta"]["h1"];
@@ -84,3 +84,14 @@ contactP[2].textContent = siteContent["contact"]["email"];
 
 let copyright = document.querySelector("footer p");
 copyright.textContent = siteContent["footer"]["copyright"];
+
+//added new content
+ancors.forEach((item) => item.style.color = 'green');
+
+let nav = document.querySelector("header nav");
+let el1 = document.createElement('a');
+let el2 = document.createElement('a');
+el1.textContent = 'Child';
+el2.textContent = 'Child';
+nav.appendChild(el1);
+nav.prepend(el2);
